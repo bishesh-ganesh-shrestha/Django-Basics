@@ -13,6 +13,10 @@ class ChoiceInline(admin.StackedInline):
     extra = 2
 
 class QuestionAdmin(admin.ModelAdmin):
+    search_fields = ["question_text"]
+    list_display = ["question_text", "pub_date", "was_published_recently"]
+    list_filter = ["pub_date"]
+    
     # fields = ["pub_date", "question_text"]
     fieldsets = [
         ('Write down your question', {"fields": ["question_text"]}),
