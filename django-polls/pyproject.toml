@@ -35,11 +35,3 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://www.example.com/"
-
-[tool.setuptools.packages.find]
-include = ["django-polls*"]
-exclude = [
-  "django-polls.static*",
-  "django-polls.templates*",
-  "django-polls.migrations*"
-]
