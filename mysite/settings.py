@@ -127,14 +127,14 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
-if not TESTING:
-    INSTALLED_APPS = [
-        *INSTALLED_APPS,
-        "debug_toolbar",
-    ]
-    MIDDLEWARE = [
-        "debug_toolbar.middleware.DebugToolbarMiddleware",
-        *MIDDLEWARE,
-    ]
+# if not TESTING:
+#     INSTALLED_APPS = [
+#         *INSTALLED_APPS,
+#         "debug_toolbar",
+#     ]
+#     MIDDLEWARE = [
+#         "debug_toolbar.middleware.DebugToolbarMiddleware",
+#         *MIDDLEWARE,
+#     ]
     
 mimetypes.add_type("application/javascript", ".js", True)
