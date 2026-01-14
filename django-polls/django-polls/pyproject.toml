@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "django-polls"
 version = "0.1"
 dependencies = [
-    "django>=X.Y",  # Replace "X.Y" as appropriate
+    "django>=5.0",  # Replace "X.Y" as appropriate
 ]
 description = "A Django app to conduct web-based polls."
 readme = "README.rst"
@@ -35,3 +35,11 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://www.example.com/"
+
+[tool.setuptools.packages.find]
+include = ["django-polls*"]
+exclude = [
+  "django-polls.static*",
+  "django-polls.templates*",
+  "django-polls.migrations*"
+]
